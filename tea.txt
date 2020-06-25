@@ -1,0 +1,29 @@
+
+STEPS TO MAKE TEA FOR TWO:
+
+kinds_of_tea = [ earl=3, chamomile=2, ginger=1 ]
+
+what kind of tea?
+
+get cups from the cupboard
+check to see if kettle has enough water
+
+if it doesnt have enough water
+    got to sink
+    turn on the faucet
+    place kettle under the faucet
+    hold the kettle there until kettle is full
+
+boil water in tea kettle
+place kettle on stove heating element
+put tea into cup
+pour water into tea cup until cup is 80% full
+
+while not full:
+    our more water
+
+sugar?
+lemon?
+milk?
+cream?
+drink with pinkie out
