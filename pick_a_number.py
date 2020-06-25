@@ -1,3 +1,4 @@
+
 # Selects an integer between 1 and 10
 from random import randint
 
