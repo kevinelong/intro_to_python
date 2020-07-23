@@ -1,9 +1,6 @@
-# data = {
-#     1: 13,
-#     5: 3,
-#     10: 1,
-#     25: 1,
-# }
+# We have a change drawer with unlimited change,
+# what is the most efficient way to give
+# a specific amount of change
 
 DENOMINATIONS = [25, 10, 5, 1]
 
@@ -19,9 +16,6 @@ def make_change(pennies):
             output[d] += 1
     return output
 
-# q = [3,1,1,3]
-# z = zip(DENOMINATIONS,q)
-# print(dict(z))
 
 print(make_change(93))
 

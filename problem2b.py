@@ -1,5 +1,5 @@
 # REQUIREMENT: total all numbers found in this string
-data = "123-456-789"
+data = "abc=123&def=456&hij=789"
 
 # how can we use split to access and then add the values together
 # list
