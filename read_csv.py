@@ -32,4 +32,4 @@ for line in line_list:
 print(menu)
 
 import json
-print(json.dumps(menu))
+print(json.dumps(menu, indent=4))
