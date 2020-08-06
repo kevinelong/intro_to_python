@@ -25,16 +25,16 @@ class Cart:
 
     def display(self):
         for item in self.item_list:
-            print(item.quantity, item.product.name, item.product.price, item.extended_price())
-        print(f"TOTAL: {self.total()}")
+            print(f"{item.quantity:<5} {item.product.name:30} @{item.product.price:>10.2f} {item.extended_price():>10.2f}")
+        print(f"TOTAL:{self.total():>53.2f}")
 
     def add_product(self, product, quantity=1):
         self.item_list.append(InvoiceItem(product, quantity))
 
 
 products = [
-    Product("rocks", 111.00),
-    Product("paper", 222.00),
+    Product("rocks", 1.00),
+    Product("paper", 22.00),
     Product("scissors", 333.00)
 ]
 

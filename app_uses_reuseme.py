@@ -3,7 +3,7 @@
 # print(do_a_thing(11, 44))
 
 # SAFER
-# from reuseme import do_a_thing
+# from reuseme import do_a_thing, URLS, Food
 # print(do_a_thing(11, 44))
 
 # SAFEST

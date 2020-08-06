@@ -1,3 +1,4 @@
+#  list of dicts
 stocks = [
     {
         "name": "TMUS",
@@ -20,31 +21,37 @@ stocks = [
         "date": "2020-12-31",
     }
 ]
+# TODO CONVERT THE ABOVE TO THE BELOW
+output_dict = {}  # Create empty dictionary to hold out output
+for s in stocks:  # Loop through all the stocks in the list
+    name = s["name"]
+    if name not in list(output_dict):  # is key not in output dict? better create the key and assign empty list
+        output_dict[name] = []  # Initialize new key in dict with empty list
+    output_dict[name].append(s)
+    del s["name"]
+print(output_dict)
 
+#  dict of lists of dicts
+expected_output = {
+    "TMUS": [
+        {
+            "closing": "200.00",
+            "date": "2020-12-30",
+        },
+        {
+            "closing": "220.00",
+            "date": "2020-12-31",
+        }
+    ],
 
-def split_list_to_dict(data, key="name"):
-    output = {}
-
-    for item in stocks:
-        name = item[key]
-
-        if name not in output:
-            output[name] = []
-
-        del item[key]
-
-        output[name].append(item)
-    return output
-
-
-def display_dict(input_dict):
-    for key in input_dict:
-        print(f"{key}")
-        item_list = input_dict[key]
-
-        for item in item_list:
-            print(item)
-
-
-result = split_list_to_dict(stocks, key="date")
-display_dict(result)
+    "MSFT": [
+        {
+            "closing": "100.00",
+            "date": "2020-12-30",
+        },
+        {
+            "closing": "110.00",
+            "date": "2020-12-31",
+        }
+    ]
+}
