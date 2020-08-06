@@ -26,6 +26,10 @@ for line in line_list:
         parts = line.split(",")
         # print(parts)
         # print(len(parts))
-        menu[parts[ID_FIELD]] = Product(parts[0], parts[1], parts[2], parts[3])  # [NAME_FIELD]
+        # menu[parts[ID_FIELD]] = Product(parts[0], parts[1], parts[2], parts[3])  # [NAME_FIELD]
+        menu[parts[ID_FIELD]] = parts
     index += 1
 print(menu)
+
+import json
+print(json.dumps(menu))
