@@ -25,7 +25,8 @@ class Cart:
 
     def display(self):
         for item in self.item_list:
-            print(f"{item.quantity:<5} {item.product.name:30} @{item.product.price:>10.2f} {item.extended_price():>10.2f}")
+            dollar_item = "$" + f"{item.extended_price():.2f}"
+            print(f"{item.quantity:<5} {item.product.name:30} @{item.product.price:>10.2f} {dollar_item:>10}")
         print(f"TOTAL:{self.total():>53.2f}")
 
     def add_product(self, product, quantity=1):

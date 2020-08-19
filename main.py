@@ -1,5 +1,5 @@
 def numbers(v):
-    print(v, bin(v), hex(v), v)
+    print(v, bin(v), hex(v), chr(v))
 
 
 def show_ascii(name):
@@ -8,7 +8,7 @@ def show_ascii(name):
         numbers(ascii_code)
 
 
-show_ascii("ABC")
+show_ascii("KEVIN")
 
 r = 200
 g = 240
