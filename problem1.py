@@ -1,37 +1,27 @@
-# Make change
-# unlimited number of coins
-#
+# We have a change drawer with unlimited change,
+# what is the most efficient way to give
+# a specific amount of change
 
-COINS = [25, 10, 5, 1]
+DENOMINATIONS = [25, 10, 5, 1]
 
 
-def make_change(goal):
-    change_to_give = {}
-
-    # while remaining is greater than zero:
-    # go through denominations from largest to smallest
-
-    # while remaining less than denomination
-    # add quanity until difference less than denomination
-    remaining_pennies = goal
-    for coin in COINS:  # visit each denom
-        while remaining_pennies >= coin:  # determine if current denom issmaller than pennies remain
-            remaining_pennies -= coin  # pennies remaining
-            if coin not in change_to_give:
-                change_to_give[coin] = 0
-            change_to_give[coin] += 1
-    return change_to_give
+def make_change(pennies):
+    output = {}
+    # TODO put code here
+    for d in DENOMINATIONS:
+        while pennies >= d:
+            pennies -= d
+            if d not in output:
+                output[d] = 0
+            output[d] += 1
+    return output
 
 
 print(make_change(93))
 
-# EXPECTED OUTPUT:
-# { 25:3, 10:1, 5:1, 1:3 }
-
-print(make_change(76))
-# EXPECTED OUTPUT:
-# {25: 3, 1: 1}
-
-print(make_change(200))
-# EXPECTED OUTPUT:
-# {25: 8}
+# data = {
+#     1: 3,
+#     5: 1,
+#     10: 1,
+#     25: 3,
+# }
