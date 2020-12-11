@@ -6,5 +6,5 @@ line_list = [
     ["1004", "Veggie Delight", "39.99", "All the veg!!!", "http://www.example.com/photos/img_1002.png"],
 ]
 for line in line_list:
-    text = "\t".join(line)
+    text = ",".join(line)
     output_file.write(text + "\n")

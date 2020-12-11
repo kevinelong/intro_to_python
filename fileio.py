@@ -17,10 +17,10 @@ def read_list_from_file(file_name):
     return output_word_list
 
 
-# word_list = ["Larry", "Moe", "Curly"]
-#
-# write_list_to_file(word_list, "data.txt")
-# print(word_list)
+word_list = ["Larry", "Moe", "Curly"]
+
+write_list_to_file(word_list, "data.txt")
+print(word_list)
 
 result_word_list = read_list_from_file("data.txt")
 
