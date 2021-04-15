@@ -23,3 +23,5 @@ line_glue = "\n"  # new line
 document = line_glue.join(fruit_list)
 
 print(document)
+
+dir(str)
