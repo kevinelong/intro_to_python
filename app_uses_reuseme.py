@@ -11,6 +11,7 @@ import reuseme
 
 from random import randint
 
+print(randint(100,1000))
 print(reuseme.do_a_thing(11, 44))
 
 for u in reuseme.URLS:
