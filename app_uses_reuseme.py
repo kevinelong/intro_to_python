@@ -1,8 +1,8 @@
 # LEAST SAFE
-# from reuseme import *
+from reuseme import *
 
 # SAFER
-from reuseme import do_a_thing, URLS, Food
+# from reuseme import do_a_thing, URLS, Food
 
 # SAFEST
 # import reuseme
@@ -17,8 +17,8 @@ donut = Food("Donut!")
 print(donut.name)
 
 
-def do_a_thing(a, b):
-    return a * b
-
-
-print(do_a_thing(4,7))
+# def do_a_thing(a, b):
+#     return a * b
+#
+#
+# print(do_a_thing(4,7))
