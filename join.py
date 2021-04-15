@@ -3,8 +3,11 @@ text_list = [
     "Moe",
     "Curly"
 ]
+
 print(text_list)
-glue = " : "
+
+glue = "---"
+
 together = glue.join(text_list)
 print(together)
 
@@ -13,7 +16,7 @@ print(together)
 raw_text = "apple orange pear"
 print(raw_text)
 separator = " "
-fruit_list = raw_text.split(separator)
+fruit_list = raw_text.split(separator) # convert to list
 print(fruit_list)
 
 line_glue = "\n"  # new line

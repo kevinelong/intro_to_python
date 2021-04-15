@@ -8,7 +8,7 @@ def show_ascii(name):
         numbers(ascii_code)
 
 
-show_ascii("KEVIN")
+show_ascii("Kevin!!!")
 
 r = 200
 g = 240
@@ -18,3 +18,6 @@ rgb = [r, g, b]
 
 for v in rgb:
     numbers(v)
+
+for i in range(128514,128616):
+    numbers(i)
