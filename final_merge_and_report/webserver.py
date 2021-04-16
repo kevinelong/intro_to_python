@@ -7,11 +7,15 @@ app.secret_key = b'kevinelong'
 
 @app.route('/')
 def index():
-    return "Hey <b>there</b>!<br><a href=\"/signup_form/\"> NEXT </a>"
+    session.clear()
+    return "Hey <b>there</b>!<br><a href=\"/login/\"> LOGIN </a>"
 
 
 @app.route('/reports/')
 def reports():
+
+    if "username" not in dict(session):
+        return redirect('/login/')
 
     if "report" in request.args:
         r = request.args["report"]
@@ -31,6 +35,39 @@ def reports():
     EMAIL GROUP BY SENDER
 </a>
     """
+
+@app.route('/login/')
+def login():
+    return '''
+    <h1> LOGIN </h1>
+<form method="POST" action="/authenticate">
+    <input name="username" placeholder="username">
+    <input name="password" type="password" placeholder="password">
+    <input type="submit" value="LOGIN">
+</form>
+'''
+
+
+valid_users = {
+    "kevinelong" : "aaa",
+    "nina" : "bbb",
+}
+
+
+@app.route('/authenticate', methods=['POST'])
+def authenticate():
+
+    username = request.form['username']
+    password = request.form['password']
+
+    if username not in valid_users:
+        return redirect('/login/')
+
+    if valid_users[username] == password:
+        session["username"] = username
+        return redirect('/reports/')
+    else:
+        return redirect('/login/')
 
 
 @app.route('/signup_form/')
@@ -85,21 +122,7 @@ def secure_me():
     else:
         return "405"
 
-@app.route('/login/')
-def login():
-    return '''
-<form method="POST" action="/authenticate">
-    <input name="username">
-    <input name="password" type="password">
-    <input type="submit">
-</form>
-'''
 
-@app.route('/authenticate', methods=['POST'])
-def authenticate():
-    username = request.form['username']
-    session["username"] = username
-    return redirect('/content/')
 
 @app.route('/content/')
 def content():
