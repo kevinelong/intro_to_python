@@ -10,10 +10,6 @@ from reuseme import *
 print(do_a_thing(11, 44))
 print(do_a_thing(13, 13))
 
-print(randint(100,1000))
-print(reuseme.do_a_thing(11, 44))
-
-for u in reuseme.URLS:
 for u in URLS:
     print(u)
 
