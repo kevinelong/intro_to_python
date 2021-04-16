@@ -74,12 +74,12 @@ cleansed = clean_matrix(results)
 # print(cleansed)
 
 total = len(cleansed)
-by_date = summarize(cleansed, 1) #date
-by_sender = summarize(cleansed, 2) #sender
+by_date = summarize(cleansed, 1)  # date
+by_sender = summarize(cleansed, 2)  # sender
 
 
 def export_to_file(data, name):
-    f = open(f"final_merge_and_report/output/{name}.json", "w")
+    f = open(f"./output/{name}.json", "w")
     f.write(json.dumps(data))
 
 

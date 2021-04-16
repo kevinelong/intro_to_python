@@ -12,6 +12,7 @@ def index():
 
 @app.route('/reports/')
 def reports():
+
     if "report" in request.args:
         r = request.args["report"]
         f = open(f"./output/{r}.json")
